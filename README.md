@@ -1,6 +1,10 @@
-# :hatched_chick: Proxima Poussin Miner v2.0.0 — 0 % fees
+# 🐣 Proxima Poussin Miner v2.0.0 — 0 % fees
 
-### :one: Installer et configurer le nœud Proxima
+Mineur GPU NVIDIA pour le réseau **Proxima**, basé sur une version modifiée de **ProxiChorizo**, développé par suprnova.cc.
+
+**100 % gratuit — 0 % developer fees.**
+
+### 1️⃣ Installer et configurer le nœud Proxima
 
 ```bash
 mkdir -p ~/proxima && cd ~/proxima
@@ -33,15 +37,15 @@ mine:
 
 Démarrer le nœud et attendre sa synchronisation.
 
-### :two: Lancer le Stratum
+### 2️⃣ Lancer le Stratum
 
 ```bash
 cd ~/proxima/bin && screen -S proxima-stratum ./proxi node mine --workers 0 --stream http://65.21.170.230:8001 --stream http://79.137.70.25:8001 --stream http://51.254.47.76:8001
 ```
 
-### :three: Télécharger le mineur
+### 3️⃣ Télécharger le mineur
 
-:envelope_with_arrow: **Token GitHub fourni en MP.**
+📩 **Token GitHub fourni en MP.**
 
 ```bash
 read -rsp "Token GitHub : " TOKEN; echo
@@ -64,7 +68,7 @@ chown -R user:user /home/user/proxima-poussin-miner
 unset TOKEN
 ```
 
-### :four: Ajouter la clé et lancer le mineur
+### 4️⃣ Ajouter la clé et lancer le mineur
 
 Placer `proxima.key` (ou un autre fichier `*.key`) dans le dossier du mineur.
 
@@ -74,4 +78,28 @@ Placer `proxima.key` (ou un autre fichier `*.key`) dans le dossier du mineur.
 
 Au premier lancement, saisir l'adresse IP du coordinateur Stratum (port `8200`).
 
-:pick: **Bon minage !**
+### 📜 Licence et crédits
+
+**Proxima Poussin Miner** est un projet communautaire dérivé de **ProxiChorizo**, développé par **suprnova.cc**.
+
+Copyright © 2026 suprnova.cc — droits sur le logiciel original.
+
+Les modifications spécifiques à Proxima Poussin Miner sont réalisées par **Dorian-360**.
+
+Ce projet est distribué sous la **ProxiChorizo License 1.0**, conformément aux conditions de redistribution prévues par cette licence.
+
+Conditions de redistribution :
+
+- Le logiciel dérivé doit conserver la ProxiChorizo License 1.0.
+- Le code source complet correspondant doit accompagner toute distribution d'une version modifiée.
+- Les mentions de copyright, d'attribution et le fichier `NOTICE` doivent être conservés.
+- Les modifications apportées au logiciel original doivent être clairement identifiées.
+- L'intégration du code dans un autre mineur commercial ou fermé peut nécessiter l'autorisation écrite préalable de suprnova.cc, conformément à la section 3 de la licence.
+
+**Proxima Poussin Miner est distribué gratuitement et ne prélève aucun frais développeur.**
+
+Ce projet est indépendant et n'est ni officiel, ni affilié, ni approuvé par suprnova.cc.
+
+Licence complète : consulter le fichier `LICENSE` fourni avec le code source.
+
+### 🐣 Bon minage !
