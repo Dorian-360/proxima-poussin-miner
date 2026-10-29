@@ -45,8 +45,6 @@ cd ~/proxima/bin && screen -S proxima-stratum ./proxi node mine --workers 0 --st
 
 ### 3️⃣ Télécharger le mineur
 
-📩 **Token GitHub fourni en MP.**
-
 ```bash
 mkdir -p /home/user/proxima-poussin-miner && \
 cd /home/user/proxima-poussin-miner && \
