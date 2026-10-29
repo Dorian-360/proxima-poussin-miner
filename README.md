@@ -48,24 +48,12 @@ cd ~/proxima/bin && screen -S proxima-stratum ./proxi node mine --workers 0 --st
 📩 **Token GitHub fourni en MP.**
 
 ```bash
-read -rsp "Token GitHub : " TOKEN; echo
-export TOKEN
-
 mkdir -p /home/user/proxima-poussin-miner && \
 cd /home/user/proxima-poussin-miner && \
-ASSET_ID=$(curl -fsSL \
-  -H "Authorization: Bearer $TOKEN" \
-  "https://api.github.com/repos/Dorian-360/proxima-poussin-miner/releases/tags/v2.0.0" \
-  | python3 -c 'import json,sys; d=json.load(sys.stdin); print(next(a["id"] for a in d["assets"] if a["name"]=="proxima-poussin-miner-v2.0.0.tar.gz"))') && \
-curl -fL \
-  -H "Authorization: Bearer $TOKEN" \
-  -H "Accept: application/octet-stream" \
-  -o proxima-poussin-miner-v2.0.0.tar.gz \
-  "https://api.github.com/repos/Dorian-360/proxima-poussin-miner/releases/assets/$ASSET_ID" && \
-tar xzf proxima-poussin-miner-v2.0.0.tar.gz && \
-chown -R user:user /home/user/proxima-poussin-miner
-
-unset TOKEN
+wget -O proxima-poussin-miner-v2.0.0.tar.gz \
+https://github.com/Dorian-360/proxima-poussin-miner/releases/download/v2.0.0/proxima-poussin-miner-v2.0.0.tar.gz && \
+tar -xzf proxima-poussin-miner-v2.0.0.tar.gz && \
+sudo chown -R user:user /home/user/proxima-poussin-miner
 ```
 
 ### 4️⃣ Ajouter la clé et lancer le mineur
